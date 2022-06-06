@@ -4,10 +4,6 @@ import BaseHead from "@components/BaseHead.astro";
 const title = "Education Alchemist";
 const description =
 	"I’m not interested in transforming iron into gold, nor am I searching for a fountain of youth. What compels my quest is the alchemy of the soul.";
-const image = {
-	href: `https://cdn.statically.io/og/theme=light/${title}.png`,
-	alt: `Open Graph image for the ${title} page`,
-};
 
 const links = [
 	{
@@ -27,7 +23,7 @@ const links = [
 
 <html lang="en" class="bg-[#FEFAFB]">
 	<head>
-		<BaseHead {title} {description} {image} />
+		<BaseHead {title} {description} />
 	</head>
 	<body class="font-serif text-[#3B586A]">
 		<div class="grid place-items-center h-screen content-center space-y-[25px] text-center">
