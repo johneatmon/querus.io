@@ -9,7 +9,7 @@ export interface Props {
 const { title, description } = Astro.props as Props;
 
 const image = {
-	href: '/querus_og.png',
+	href: 'querus_og.png',
 	alt: 'Open graph image for Querus.'
 };
 ---
@@ -33,8 +33,8 @@ const image = {
 <meta property="og:url" content={Astro.canonicalURL} />
 <meta property="og:site_name" content="Michael G. Eatmon" />
 {image && (
-	<meta property="og:image" content={image.href} />
-	<meta property="og:image:secure_url" content={image.href} />
+	<meta property="og:image" content={Astro.site + image.href} />
+	<meta property="og:image:secure_url" content={Astro.site + image.href} />
 	<meta property="og:image:alt" content={image.alt} />
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="1200" />
@@ -44,7 +44,7 @@ const image = {
 <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-{image && (<meta name="twitter:image" content={image.href} />)}
+{image && (<meta name="twitter:image" content={Astro.site + image.href} />)}
 
 <meta name="theme-color" content="#FEFAFB" media="(prefers-color-scheme: light)" />
 <meta name="color-scheme" content="light dark" />
