@@ -25,19 +25,19 @@ const links = [
 	<head>
 		<BaseHead {title} {description} />
 	</head>
-	<body class="font-serif text-[#3B586A]">
-		<div class="grid place-items-center h-screen content-center space-y-[25px] text-center">
+	<body class="font-serif text-[#3B586A] px-4">
+		<div class="grid place-items-center min-h-screen content-center py-10 space-y-[25px] text-center">
 			<div class="w-[250px] h-[250px] object-contain">
 				<img src="/querus.png" alt="Querus logo" loading="eager">
 			</div>
-			<h1 class="text-[64px] leading-[72px] font-bold uppercase pt-[25px]">
+			<h1 class="text-[32px] lg:text-[64px] leading-[1.1] font-bold uppercase pt-[25px]">
 				Michael G. Eatmon
 			</h1>
-			<p class="small-caps text-[32px] leading-[36px]">education alchemist</p>
+			<p class="small-caps text-2xl lg:text-[32px] leading-[1.1]">education alchemist</p>
 			<ul role="list" class="flex flex-col gap-y-[25px] w-full max-w-[420px] pt-[25px] pb-[75px]">
 				{links.map((link) =>
 					<li>
-						<a class="block text-xl bg-[#5B826D] active:bg-opacity-75 focus:bg-opacity-75 hover:bg-opacity-75 text-white p-[30px] leading-none rounded transition-colors duration-300 ease-in-out" href={link.href}>
+						<a class="block text-lg lg:text-xl bg-[#5B826D] active:bg-opacity-75 focus:bg-opacity-75 hover:bg-opacity-75 text-white p-[30px] leading-none rounded transition-colors duration-300 ease-in-out" href={link.href}>
 							<span class="ornm" aria-hidden="true">C</span>
 							{link.label}
 							<span class="ornm" aria-hidden="true">C</span>
@@ -45,7 +45,7 @@ const links = [
 					</li>
 				)}
 			</ul>
-			<blockquote class="text-xl italic">
+			<blockquote class="text-lg lg:text-xl italic">
 				<p>
 					<span class="small-caps">A faithful</span> friend<br/>
 					is an elixir of life.<br/>
