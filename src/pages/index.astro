@@ -1,5 +1,6 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
+import { Img } from "astro-imagetools/components";
 
 const title = "Education Alchemist";
 const description =
@@ -28,7 +29,16 @@ const links = [
 	<body class="font-serif text-[#3B586A] px-4">
 		<div class="grid place-items-center min-h-screen content-center py-10 space-y-[25px] text-center">
 			<div class="w-[250px] h-[250px] object-contain">
-				<img src="/querus.webp" alt="Querus logo" loading="eager" height="250" width="250">
+				<Img
+					src="/src/img/querus.png"
+					alt="Querus logo"
+					loading="eager"
+					placeholder="none"
+					width={250}
+					height={250}
+					preload="png"
+					decoding="async"
+				/>
 			</div>
 			<h1 class="text-[32px] lg:text-[64px] leading-[1.1] font-bold uppercase pt-[25px]">
 				Michael G. Eatmon
